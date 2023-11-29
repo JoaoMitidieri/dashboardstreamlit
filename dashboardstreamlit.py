@@ -24,8 +24,9 @@ if not sys.warnoptions:
 import streamlit as st
 import datetime
 from PIL import Image
+import openpyxl
 # Carregando Dados
-vendas = pd.read_excel('fato_vendas.xlsx')
+vendas = pd.read_excel('fato_vendas.xlsx', engine='openpyxl')
 vendedor = pd.read_excel('dim_vendedor.xlsx')
 produtos = pd.read_excel('dim_produtos.xlsx')
 fam_produtos = pd.read_excel('dim_familia_produtos.xlsx')
